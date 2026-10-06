@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AURUM — Calibre I | Alta Relojería Mecánica</title>
+  <meta name="description" content="Descubre el Calibre I de AURUM. Ingeniería micromecánica suspendida en el vacío, manufactura de oro puro y arquitectura horológica excepcional.">
+
+  <!-- Tipografía seleccionada: Cinzel (Display Haute Horlogerie) e Inter (Precisión técnica suiza) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="is-loading">
+  <!-- Fallback accesible sin JavaScript -->
+  <noscript>
+    <div class="noscript-banner">
+      <div class="noscript-content">
+        <h1>AURUM</h1>
+        <p>Calibre I — Movimiento mecánico de manufactura propia. Para experimentar la visualización tridimensional cinemática interactiva, activa JavaScript en tu navegador.</p>
+      </div>
+    </div>
+  </noscript>
+
+  <!-- Canvas WebGL fijo en el fondo -->
+  <div id="webgl-container" aria-hidden="true">
+    <canvas id="webgl-canvas"></canvas>
+    <div class="vignette-overlay"></div>
+  </div>
+
+  <!-- Navegación sobria y disciplinada -->
+  <header class="site-header" role="banner">
+    <a href="#" class="brand-logo" aria-label="AURUM Inicio">AURUM</a>
+    <div class="header-status">
+      <span class="status-dot"></span>
+      <span class="status-label">Calibre I &bull; 28,800 A/h</span>
+    </div>
+    <a href="#contacto" class="nav-contact-link">Edición Privada</a>
+  </header>
+
+  <!-- Indicador sutil de scroll -->
+  <aside class="scroll-cue" aria-hidden="true">
+    <div class="scroll-line">
+      <div class="scroll-progression"></div>
+    </div>
+    <span class="scroll-label">Scroll</span>
+  </aside>
+
+  <!-- Contenedor scrollytelling de una sola pantalla con pinning -->
+  <main class="story-wrapper" id="main-content">
+    
+    <!-- Hero Section -->
+    <section class="story-chapter chapter-hero" id="hero">
+      <div class="chapter-inner hero-inner">
+        <p class="super-title">Manufactura Suiza &bull; Pieza Única</p>
+        <h1 class="hero-title">
+          <span class="char-wrap">A</span><span class="char-wrap">U</span><span class="char-wrap">R</span><span class="char-wrap">U</span><span class="char-wrap">M</span>
+        </h1>
+        <p class="hero-subtitle">La arquitectura del tiempo liberada de la materia.</p>
+        <div class="hero-specs-row">
+          <div class="spec-item">
+            <span class="spec-val">198</span>
+            <span class="spec-label">Componentes</span>
+          </div>
+          <div class="spec-divider"></div>
+          <div class="spec-item">
+            <span class="spec-val">4 Hz</span>
+            <span class="spec-label">Frecuencia</span>
+          </div>
+          <div class="spec-divider"></div>
+          <div class="spec-item">
+            <span class="spec-val">72 h</span>
+            <span class="spec-label">Reserva de marcha</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Capítulo 1: Despiece / Vista Explotada -->
+    <section class="story-chapter chapter-exploded" id="despiece">
+      <div class="chapter-inner content-card align-left">
+        <div class="chapter-tag">01 &bull; Despiece Axial</div>
+        <h2 class="chapter-title">La anatomía del vacío</h2>
+        <p class="chapter-text">
+          Cada capa se desacopla a lo largo del eje óptico sin tolerancias residuales. Platinas esqueletadas en oro de 18 quilates talladas con precisión micrométrica para desafiar la gravedad.
+        </p>
+      </div>
+    </section>
+
+    <!-- Capítulo 2: El Corazón Oscilante (Macro) -->
+    <section class="story-chapter chapter-escapement" id="mecanismo">
+      <div class="chapter-inner content-card align-right">
+        <div class="chapter-tag">02 &bull; Micromecánica</div>
+        <h2 class="chapter-title">El latido armónico</h2>
+        <p class="chapter-text">
+          Volante de inercia variable con tornillos de compensación periféricos y espiral libre. Veinticinco rubíes sintéticos absorben las tensiones cinemáticas del tren de engranajes.
+        </p>
+      </div>
+    </section>
+
+    <!-- Capítulo 3: Reensamblaje / Precisión Absoluta -->
+    <section class="story-chapter chapter-reassembly" id="ensamblaje">
+      <div class="chapter-inner content-card align-left">
+        <div class="chapter-tag">03 &bull; Unión Monolítica</div>
+        <h2 class="chapter-title">Precisión reensamblada</h2>
+        <p class="chapter-text">
+          El mecanismo vuelve a cerrar sus planos. Cero holgura, sincronía absoluta entre el barrilete de fuerza constante y la jaula de escape.
+        </p>
+      </div>
+    </section>
+
+    <!-- Cierre: CTA único y definitivo -->
+    <section class="story-chapter chapter-closing" id="contacto">
+      <div class="chapter-inner closing-inner">
+        <div class="closing-badge">Serie Limitada a 24 Ejemplares</div>
+        <h2 class="closing-title">Tiempo Suspendido</h2>
+        <p class="closing-text">
+          Cada calibre se fabrica por encargo y se ajusta a mano durante 320 horas en nuestro atelier de Ginebra.
+        </p>
+        <div class="cta-box">
+          <button type="button" class="btn-aurum" id="btn-inquire" aria-label="Solicitar asignación privada de AURUM Calibre I">
+            <span class="btn-text">Solicitar Asignación Privada</span>
+            <span class="btn-glow" aria-hidden="true"></span>
+          </button>
+        </div>
+        <footer class="footer-meta">
+          <span>&copy; AURUM Horlogerie Genevoise. Todos los derechos reservados.</span>
+        </footer>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Modal minimalista de solicitud privada -->
+  <dialog id="inquiry-dialog" class="aurum-dialog">
+    <div class="dialog-frame">
+      <button type="button" class="dialog-close" id="dialog-close-btn" aria-label="Cerrar ventana">&times;</button>
+      <div class="dialog-header">
+        <span class="dialog-tag">Registro Confidencial</span>
+        <h3 class="dialog-title">Solicitud de Calibre I</h3>
+      </div>
+      <form class="dialog-form" id="inquiry-form" onsubmit="event.preventDefault(); window.handleFormSubmit();">
+        <div class="field-group">
+          <label for="client-name">Nombre completo</label>
+          <input type="text" id="client-name" required placeholder="Lord / Lady / Dr. / Nombre" autocomplete="name">
+        </div>
+        <div class="field-group">
+          <label for="client-email">Dirección de correo</label>
+          <input type="email" id="client-email" required placeholder="contacto@patrimonio.com" autocomplete="email">
+        </div>
+        <div class="field-group">
+          <label for="client-region">País de residencia</label>
+          <input type="text" id="client-region" required placeholder="Suiza, España, México, EE.UU...">
+        </div>
+        <button type="submit" class="btn-aurum btn-dialog-submit">
+          <span class="btn-text">Enviar Solicitud</span>
+          <span class="btn-glow" aria-hidden="true"></span>
+        </button>
+        <p class="dialog-notice" id="form-notice">Nos pondremos en contacto a través de nuestra cancillería privada en un plazo de 24 horas.</p>
+      </form>
+    </div>
+  </dialog>
+
+  <!-- Bibliotecas externas desde CDN oficial -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  
+  <script src="script.js"></script>
+</body>
+</html>
